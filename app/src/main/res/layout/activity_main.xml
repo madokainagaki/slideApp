@@ -19,9 +19,8 @@
         android:id="@+id/textTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="タイトル"
         android:gravity="center"
-        android:textSize="24sp"/>
+        android:textSize="12sp"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -39,7 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_toStartOf="@+id/btnNext"
             android:layout_toEndOf="@+id/btnPre"
-            android:text="自動再生開始" />
+            android:id="@+id/btnSlide"/>
 
         <ImageView
             android:layout_width="48dp"
