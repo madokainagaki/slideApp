@@ -13,6 +13,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 import android.graphics.Color;
 import android.provider.OpenableColumns
+import android.util.Log
 import androidx.appcompat.app.AlertDialog
 
 
@@ -48,6 +49,7 @@ class MainActivity : AppCompatActivity() {
             timer()
         }
     }
+
 
     private fun permissionStorage() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -199,4 +201,8 @@ class MainActivity : AppCompatActivity() {
         view()
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        cursor!!.close()
+    }
 }
